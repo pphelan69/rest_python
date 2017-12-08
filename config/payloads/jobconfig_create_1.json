@@ -1,0 +1,32 @@
+{
+
+	"active": true,
+	"description": "",
+	"template": {
+		"id": "fe6e750e-920e-473f-b867-45b64ce54875"
+	},
+	"lastModifiedByUser": {
+		"id": 21610,
+		"name": "peter.phelan@actian.com"
+	},
+	"name": "AUTO_CONFIG",
+	"runtimeConfig": {
+		"packageName": "",
+		"entryPoint": "",
+		"artifactDirPathEntries": [],
+		"logLevel": "info",
+		"macros": [],
+		"variables": [],
+		"inMessages": [],
+		"outMessageNames": []
+	},
+	"schedule": "0",
+	"server": {
+		"type": "agent",
+		"engine": "DX"
+	},
+	"user": {
+		"id": 21610,
+		"name": "peter.phelan@actian.com"
+	}
+}

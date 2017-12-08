@@ -1,0 +1,619 @@
+{
+	"info": {
+		"name": "DataCloudInteg",
+		"_postman_id": "40c88565-f77f-1af4-eeae-79c53e45cbd3",
+		"description": "Used for testing the DataCloud Integration Manager.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account-user_manager",
+			"item": [
+				{
+					"name": "https://{{target_host}}/v2/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"authorization\",\"Bearer: \" + new Buffer(jsonData[\"sessionid\"]).toString('base64'))",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{username: \"peter.phelan@actian.com\", password: \"Phelan123$\"}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/login",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/account",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/users",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/users/21611",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/users/21610",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"users",
+								"21610"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{username: \"pphelan69@gmail.com\", password: \"Actian123$\"}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/users",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/users",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{username: \"pphelan69@gmail.com\", password: \"Actian123$\"}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/users/21611",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"users",
+								"21611"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/resourcegroups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/resourcegroups",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"resourcegroups"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login-service",
+			"item": [
+				{
+					"name": "https://{{target_host}}/v2/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"authorization\",\"Bearer: \" + new Buffer(jsonData[\"sessionid\"]).toString('base64'))",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{username: \"peter.phelan@actian.com\", password: \"Phelan123$\"}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/login",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v2/logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/logout",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"logout"
+							]
+						},
+						"description": "Logout rest call"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job-configuration \"Build and maintain hierarchical Job Configurations.\"",
+			"item": [
+				{
+					"name": "GET JOB TEMPLLATEBY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/jobtemplates/f33143bc-122f-4ab1-9765-6dc3a008bbd5",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"jobtemplates",
+								"f33143bc-122f-4ab1-9765-6dc3a008bbd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST JOBTEMPLATE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\t\"active\": true,\r\n\t\"description\": \"\",\r\n\t\"createdByUser\": {\r\n\t\t\"id\": 21610,\r\n\t\t\"name\": \"peter.phelan@actian.com\"\r\n\t},\r\n\t\"name\": \"POSTMAN_TEMP\",\r\n\t\"runtimeConfig\": {\r\n\t\t\"packageName\": \"\",\r\n\t\t\"entryPoint\": \"\",\r\n\t\t\"artifactDirPathEntries\": [],\r\n\t\t\"logLevel\": \"info\",\r\n\t\t\"macros\": [],\r\n\t\t\"variables\": [],\r\n\t\t\"inMessages\": [],\r\n\t\t\"outMessageNames\": []\r\n\t},\r\n\t\"server\": {\r\n\t\t\"type\": \"cloud\",\r\n\t\t\"id\": \"290\"\r\n\t}\r\n}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/jobtemplates",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"jobtemplates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE JOBTEMPLLATE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/jobtemplates/9721f778-912c-4db1-ae5b-431ff165020c",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"jobtemplates",
+								"9721f778-912c-4db1-ae5b-431ff165020c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL JOBTEMPLATES",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/jobtemplates?size=10000",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"jobtemplates"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10000",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE JOBTEMPLATE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"active\": true,\r\n  \"created\": \"2017-11-08T23:38:32.188-06:00\",\r\n  \"createdByUser\": {\r\n    \"id\": \"21610\",\r\n    \"name\": \"peter.phelan@actian.com\",\r\n    \"links\": {\r\n      \"self\": \"https://dxapistage.actiandatacloud.com/v2/users/21610\"\r\n    }\r\n  },\r\n  \"description\": \"\",\r\n  \"lastModified\": \"2017-11-08T23:38:32.188-06:00\",\r\n  \"lastModifiedByUser\": {\r\n    \"id\": \"21610\",\r\n    \"name\": \"peter.phelan@actian.com\",\r\n    \"links\": {\r\n      \"self\": \"https://dxapistage.actiandatacloud.com/v2/users/21610\"\r\n    }\r\n  },\r\n  \"license\": \"null\",\r\n  \"runtimeConfig\": {\r\n    \"packageName\": \"\",\r\n    \"entryPoint\": \"\",\r\n    \"artifactDirPathEntries\": [],\r\n    \"logLevel\": \"info\",\r\n    \"macroSetNames\": [],\r\n    \"macros\": [],\r\n    \"variables\": [],\r\n    \"inMessages\": [],\r\n    \"outMessageNames\": []\r\n  },\r\n  \"server\": {\r\n    \"type\": \"cloud\",\r\n    \"engine\": \"DX\",\r\n    \"id\": \"290\"\r\n  },\r\n  \"user\": {\r\n    \"id\": \"21610\",\r\n    \"name\": \"peter.phelan@actian.com\",\r\n    \"links\": {\r\n      \"self\": \"https://dxapistage.actiandatacloud.com/v2/users/21610\"\r\n    }\r\n  },\r\n  \"id\": \"783df21c-90f9-47c0-ab97-3a4981a1f717\",\r\n  \"name\": \"AUTO_TEMPLATE\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v2/jobtemplates/783df21c-90f9-47c0-ab97-3a4981a1f717",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v2",
+								"jobtemplates",
+								"783df21c-90f9-47c0-ab97-3a4981a1f717"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MacroManager",
+			"description": "",
+			"item": [
+				{
+					"name": "https://{{target_host}}/v1/macrosets?includeMacros=true&size=500",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "accountid",
+								"value": "1193"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://{{target_host}}/v1/macrosets?includeMacros=true&size=500",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v1",
+								"macrosets"
+							],
+							"query": [
+								{
+									"key": "includeMacros",
+									"value": "true",
+									"equals": true
+								},
+								{
+									"key": "size",
+									"value": "500",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v1/macrosets/{{user_id}}/macros",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "accountid",
+								"value": "{{accountid}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v1/macrosets/{{user_id}}/macros",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v1",
+								"macrosets",
+								"{{user_id}}",
+								"macros"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v1/macrosets/{user_id}/macros/{{macro_name}}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "accountid",
+								"value": "{{accountid}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"mymacro2\", \n\t\"value\": \"C:/data/logs2\", \n\t\"secure\": False\n}"
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v1/macrosets/{{user_id}}/macros/{{macro_name}}",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v1",
+								"macrosets",
+								"{{user_id}}",
+								"macros",
+								"{{macro_name}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "https://{{target_host}}/v1/macrosets/{user_id}/macros/{{macro_name}} copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{authorization}}"
+							},
+							{
+								"key": "accountid",
+								"value": "{{accountid}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{target_host}}/v1/macrosets/{{user_id}}/macros/{{macro_name}}",
+							"protocol": "https",
+							"host": [
+								"{{target_host}}"
+							],
+							"path": [
+								"v1",
+								"macrosets",
+								"{{user_id}}",
+								"macros",
+								"{{macro_name}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

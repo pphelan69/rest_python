@@ -1,0 +1,26 @@
+{
+    "account": {
+        "id": "1193",
+        "name": "Account",
+        "links": {
+            "self": "https://dxapistage.actiandatacloud.com/v2/account"
+        }
+    },
+    "admin": true,
+    "links": {
+        "self": "https://dxapistage.actiandatacloud.com/v2/users/21610"
+    },
+    "active": true,
+    "created": "2017-10-18T10:38:31.450-05:00",
+    "externalId": "peter.phelan@actian.com",
+    "id": "21610",
+    "lastModified": "2017-11-09T11:33:25.395-06:00",
+    "lastModifiedByUser": {
+        "id": "21610",
+        "name": "peter.phelan@actian.com",
+        "links": {
+            "self": "https://dxapistage.actiandatacloud.com/v2/users/21610"
+        }
+    },
+    "username": "peter.phelan@actian.com"
+}

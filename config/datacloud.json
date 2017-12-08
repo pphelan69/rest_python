@@ -1,0 +1,24 @@
+[
+  {
+    "dx": {
+            "host": "dxapistage.actiandatacloud.com",
+            "user": "peter.phelan@actian.com",
+            "password": "Phelan123$"
+    },
+    "agents": {
+          "agent1":"phepe01-win7"
+    },
+    "account1": {
+          "id": "1193",
+          "name": "Actian QA Stage"
+    },
+    "user1": {
+          "id": "21610",
+          "username": "peter.phelan@actian.com"
+    },
+    "user2": {
+          "id": "21611",
+          "username": "pphelan69@gmail.com"
+    }
+  }
+]

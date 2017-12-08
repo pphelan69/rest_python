@@ -1,0 +1,12 @@
+INFO:root:C:\Users\atul.dadhich\PycharmProjects\/dc_integ_auto/tests/config/datacloud.json
+INFO:root:Request Payload for POST Jobtemplate
+INFO:root:C:\Users\atul.dadhich\PycharmProjects\/dc_integ_auto/tests/config/Req_Payloads/Create_JobTemplate.json
+INFO:root:{u'description': u'', u'runtimeConfig': {u'outMessageNames': [], u'macros': [], u'artifactDirPathEntries': [], u'packageName': u'', u'logLevel': u'info', u'entryPoint': u'', u'inMessages': [], u'variables': []}, u'server': {u'type': u'cloud', u'id': u'290'}, u'createdByUser': {u'id': 21610, u'name': u'peter.phelan@actian.com'}, u'active': True, u'name': u'AUTO_TEMPLATE'}
+INFO:root:Testing that JobTemplate Creation Msg wad Received in the Response
+INFO:root:Testing that the Correct JobTemplate Creation status was received in the Response
+INFO:root:Testing that the Response Contains a JobTemplate Id
+INFO:root:Testing that the Correct Link to the Created Job Template ID was Created in the Response
+INFO:root:https://dxapistage.actiandatacloud.com/v2/jobtemplates/0513c2f5-e2b8-4a53-9cdc-d080e671bc4c
+INFO:root:Deleting the Created Job Template
+INFO:root:204
+INFO:root:Teardown - Currently no teardown operations

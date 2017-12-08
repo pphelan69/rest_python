@@ -1,0 +1,31 @@
+ {
+	"active": true,
+	"description": "",
+	"createdByUser": {
+		"id": 21610,
+		"name": "peter.phelan@actian.com"
+	},
+	"name": "AUTO_TEMPLATE",
+	"runtimeConfig": {
+		"packageName": "",
+		"entryPoint": "",
+		"artifactDirPathEntries": [],
+		"logLevel": "info",
+		"macros": [
+			      {
+        "key": "SOURCE",
+        "value": "C:\\dataconnect",
+        "secure": false,
+        "source": "Package",
+        "$$index": 0
+      }
+		],
+		"variables": [],
+		"inMessages": [],
+		"outMessageNames": []
+	},
+	"server": {
+		"type": "agent",
+		"id": "290"
+	}
+}
